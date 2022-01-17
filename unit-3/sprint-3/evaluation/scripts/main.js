@@ -1,8 +1,9 @@
 async function apiCall(url) {
 
-
-    //add api call logic here
-
+   let response = await fetch(url)
+    
+    let data = await response.json()
+   return (data.articles) 
 
 }
 

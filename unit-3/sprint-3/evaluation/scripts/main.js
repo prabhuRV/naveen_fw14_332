@@ -10,7 +10,23 @@ async function apiCall(url) {
 
 function appendArticles(articles, main) {
 
-    //add append logic here
+    map.articles( (elem) => {
+
+        let div = document.createElement('div');
+
+        let con = document.createElement('p');
+        con.textContent= elem.content;
+        
+        let desc = document.createElement('p');
+        desc.textContent = elem.description;
+
+        let img = document.createElement('img');
+        img.src = elem.image;
+
+        div.append(con,desc,img)
+        main.append(div)
+
+    })
 
 }
 

@@ -28,16 +28,19 @@
 
 <script type="Module">
 import { apiCall, appendArticles} from "./scripts/main.js"
-let cont = apiCall(`https://gnews.io/api/v4/top-headlines?lang=en&country=in&token=94a54afa33665675c9ee4ea8ff92bcbf`)
+let cont = apiCall(`https://gnews.io/api/v4/top-headlines?lang=en&country=in&token=b79c42349da205ddda16288089f85ecd`)
 
-// setTimeout(() => {
-//   console.log(cont)
-// },3000);
+let main = document.querySelector('#main')
+
+let dt 
 cont
-.then( (res){
-  console.log(res.cont)
+.then( (res) => {
+  appendArticles(res,main)
+  
 })
-.catch {
+.catch( (err) =>{
   console.log('error')
-}
+})
+
+
 </script>

@@ -4,14 +4,15 @@ display: flex;
 border: 1px solid black;
 margin: auto;
 width: 100%;
-height: 1000px;
+
 }
 
 #main {
-    border: 1px solid red;
+    
     width: 500px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    grid-gap : 20px
 }
 
 #main > div {

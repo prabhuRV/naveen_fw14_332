@@ -1,0 +1,23 @@
+#container{
+
+display: flex;
+border: 1px solid black;
+margin: auto;
+width: 100%;
+height: 1000px;
+}
+
+#main {
+    border: 1px solid red;
+    width: 500px;
+    
+}
+
+#main > div {
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
+
+
+

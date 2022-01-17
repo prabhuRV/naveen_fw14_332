@@ -8,9 +8,9 @@ async function apiCall(url) {
 }
 
 
-function appendArticles(articles, main) {
+function appendArticles(articles, mai) {
 
-    map.articles( (elem) => {
+    articles.map( (elem) => {
 
         let div = document.createElement('div');
 
@@ -22,9 +22,10 @@ function appendArticles(articles, main) {
 
         let img = document.createElement('img');
         img.src = elem.image;
-
+        img.setAttribute('width','400px')
+        img.setAttribute('height','400px')
         div.append(con,desc,img)
-        main.append(div)
+        mai.append(div)
 
     })
 

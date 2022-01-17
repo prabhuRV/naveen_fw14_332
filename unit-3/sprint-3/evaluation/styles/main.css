@@ -10,7 +10,8 @@ height: 1000px;
 #main {
     border: 1px solid red;
     width: 500px;
-    
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
 }
 
 #main > div {

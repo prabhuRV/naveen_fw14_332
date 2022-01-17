@@ -32,3 +32,15 @@
   </body>
 
 </html>
+
+<script type="Module">
+import { showItem } from "./scripts/main.js";
+let data = JSON.parse(localStorage.getItem('article'))
+
+let hd = document.getElementById('headline')
+
+let im = document.getElementById('img')
+
+let co = document.getElementById('content')
+showItem(data,hd,co,im)
+</script>

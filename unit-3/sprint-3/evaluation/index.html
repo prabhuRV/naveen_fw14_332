@@ -14,7 +14,8 @@
       <div id="sidebar">
         <!-- https://gnews.io/api/v4/search?lang=en&country=in&token=94a54afa33665675c9ee4ea8ff92bcbf -->
         <!--DO NOT CHANGE THIS ID's-->
-
+       <input type="text" placeholder="search" id="sea">
+       <button id="btn" onclick="sub()">Submit</button>
       </div>
 
       <div id="main">
@@ -44,5 +45,16 @@ cont
 })
 
 
+</script>
+
+<script>
+
+  function sub(){
+    
+  let dt = document.getElementById('sea').value
+
+  localStorage.setItem('search',JSON.stringify(dt))
+  }
+  
 </script>
 

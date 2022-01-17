@@ -26,3 +26,43 @@
   </body>
 
 </html>
+
+<script>
+
+  let data = JSON.parse(localStorage.getItem('search'))
+
+  console.log(data)
+
+  async function det(){
+
+    let res = await fetch(`https://gnews.io/api/v4/search?q=data&token=50688354f01fa29e2a14979dd1f2f740`)
+
+    let d = await res.json();
+    console.log(d.articles)
+    show(d.articles)
+  }
+let main = document.getElementById("main")
+  det()
+
+  function show(data){
+
+    data.map = ( (elem) =>{
+     
+      
+      
+        let con = document.createElement('p');
+        con.textContent= elem.title;
+        
+        let desc = document.createElement('p');
+        desc.textContent = elem.content;
+        
+        let img = document.createElement('img');
+        img.src = elem.image;
+        img.setAttribute('width','400px')
+        img.setAttribute('height','400px')
+        main.append(con,desc,img)
+        
+
+    })
+  }
+</script>

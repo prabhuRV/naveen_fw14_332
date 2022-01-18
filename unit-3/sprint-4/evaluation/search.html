@@ -35,13 +35,13 @@
 
   async function det(){
 
-    let res = await fetch(`https://gnews.io/api/v4/search?q=data&token=50688354f01fa29e2a14979dd1f2f740`)
+    let res = await fetch(`https://gnews.io/api/v4/search?q=data&token=4b757f9d28da480b67cd3a76d50b32b2`)
 
     let d = await res.json();
     console.log(d.articles)
     show(d.articles)
   }
-let main = document.getElementById("main")
+let mai = document.getElementById("main")
   det()
 
   function show(data){
@@ -49,7 +49,7 @@ let main = document.getElementById("main")
     data.map = ( (elem) =>{
      
       
-      
+      console.log(1)
         let con = document.createElement('p');
         con.textContent= elem.title;
         
@@ -60,7 +60,7 @@ let main = document.getElementById("main")
         img.src = elem.image;
         img.setAttribute('width','400px')
         img.setAttribute('height','400px')
-        main.append(con,desc,img)
+        mai.append(con,desc,img)
         
 
     })

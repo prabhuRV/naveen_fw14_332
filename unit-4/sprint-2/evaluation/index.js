@@ -192,7 +192,7 @@ app.get('/branches', async(req, res)=>{
 
 // --------------------Savings Account-------------
 
-app.post('/savings_account', async(req, res)=>{
+app.post("/savings_account", async(req, res)=>{
     try{
         const saving = await SavingAcc_Schema.create(req.body);
         res.send(saving);
@@ -202,7 +202,16 @@ app.post('/savings_account', async(req, res)=>{
     }
 })
 
+app.get("/savings_account", async(req, res)=>{
+    try{
+        const saving = await SavingAcc_Schema.find().populate({path:"MasterAcc_id"}).lean().exec()
 
+        res.send(saving);
+    }
+    catch(e){
+        res.send(e.message);
+    }
+})
 app.listen(3333, async(req, res)=>{
 
     try{

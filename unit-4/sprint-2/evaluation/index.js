@@ -58,7 +58,7 @@ const masteracc_schema = new mongoose.Schema({
     branch_id: {
         type:mongoose.Schema.Types.ObjectId,
         ref:"branch_Details",
-      //  required:true,
+       required:true,
     }
 },{
     versionKey:false,
@@ -116,7 +116,7 @@ const FixedAcc_Schema = mongoose.model('fixed_acct', fixedacc_schema);
 
 //----------------------------------------------
 
-// -------------------POST---------------
+// -------------------User---------------
 
 app.post("/users", async(req, res)=> {
 
@@ -129,20 +129,85 @@ app.post("/users", async(req, res)=> {
     }
 }),
 
-app.post("/master_accounts", async (res, req)=>{
+
+
+app.get("/users", async(req, res)=> {
+
+    try{
+        const user = await User.find().lean().exec();
+        res.send(user);
+    }
+    catch(e){
+        res.send(e.message);
+    }
+}),
+
+//-----------------------------Master ACC----------
+
+app.post("/master_accounts", async (req, res)=>{
     try{
         const master_acc = await MasterAcct_Schema.create(req.body);
+       
         res.send(master_acc);
     }
     catch(e){
         res.send(e.message);
     }
+}),
+
+app.get("/master_accounts", async (req, res)=>{
+    try{
+        const master_acc = await MasterAcct_Schema.find()
+        .populate({ path:"user_id"}).
+        populate({ path:"branch_id"})
+        .lean().exec();
+        res.send(master_acc)
+    }
+    catch(e){
+        res.send(e.message);
+    }
 })
-app.listen(5555, async(req, res)=>{
+
+// -----------------Branches-------------
+
+app.post("/branches", async(req, res)=>{
+    try{
+        const branch = await branchdetails.create(req.body);
+        res.send(branch)
+    }
+    catch(e){
+        res.send(e.message);
+    }
+});
+
+app.get('/branches', async(req, res)=>{
+    try{
+        const branch = await branchdetails.find().lean().exec();
+        res.send(branch);
+    }
+    catch(e){
+        res.send(e.message);
+    }
+})
+
+// --------------------Savings Account-------------
+
+app.post('/savings_account', async(req, res)=>{
+    try{
+        const saving = await SavingAcc_Schema.create(req.body);
+        res.send(saving);
+    }
+    catch(e){
+         res.send(e.message);
+    }
+})
+
+
+app.listen(3333, async(req, res)=>{
 
     try{
         await connect();
-        console.log('listening to port 5555')
+        console.log('listening to port 3333')
     }
     catch(e){
         console.log(e.message)

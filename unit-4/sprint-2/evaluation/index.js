@@ -37,7 +37,7 @@ const connect = () => {
        address:{type:String, required:true},
        IFSC:{type:String, required:true},
        MICR :{type:String, required:true},
-
+       
   },{
       versionKey:false,
       timestamps:true,
@@ -49,6 +49,16 @@ const connect = () => {
 
 const masteracc_schema = new mongoose.Schema({
     balance:{type:Number, required:true},
+    user_id :{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"user",
+        required:true,
+    },
+    branch_id: {
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"branch_Details",
+        required:true,
+    }
 },{
     versionKey:false,
     timestamps:true,

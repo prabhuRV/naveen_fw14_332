@@ -2,6 +2,7 @@ const express = require("express");
 
 const app = express();
 
+app.use(express.json());
 const mongoose = require("mongoose");
 
 const connect = () => {
@@ -57,7 +58,7 @@ const masteracc_schema = new mongoose.Schema({
     branch_id: {
         type:mongoose.Schema.Types.ObjectId,
         ref:"branch_Details",
-        required:true,
+      //  required:true,
     }
 },{
     versionKey:false,
@@ -72,7 +73,11 @@ const savingacc_schema = new mongoose.Schema({
     account_number : {type:Number, required:true, unique:true},
     balance:{type:Number, required:true},
     interestRate:{type:Number, required:true},
-
+    MasterAcc_id:{
+        type : mongoose.Schema.Types.ObjectId,
+        ref:"master_acct",
+      //  required:true,
+    }
 }, {
     versionKey:false,
     timestamps:true,
@@ -96,6 +101,11 @@ const fixedacc_schema = new mongoose.Schema({
     maturityDate :{
         type:Date,
         required:true,
+    },
+    MasterAcc_Id :{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"master_acct",
+       
     }
 },{
     versionKey:false,
@@ -105,6 +115,29 @@ const fixedacc_schema = new mongoose.Schema({
 const FixedAcc_Schema = mongoose.model('fixed_acct', fixedacc_schema);
 
 //----------------------------------------------
+
+// -------------------POST---------------
+
+app.post("/users", async(req, res)=> {
+
+    try{
+        const user = await User.create(req.body);
+        res.send(user);
+    }
+    catch(e){
+        res.send(e.message);
+    }
+}),
+
+app.post("/master_accounts", async (res, req)=>{
+    try{
+        const master_acc = await MasterAcct_Schema.create(req.body);
+        res.send(master_acc);
+    }
+    catch(e){
+        res.send(e.message);
+    }
+})
 app.listen(5555, async(req, res)=>{
 
     try{

@@ -212,6 +212,30 @@ app.get("/savings_account", async(req, res)=>{
         res.send(e.message);
     }
 })
+
+//-----------------------FIxed Accounts------------------
+
+app.post("/fixed_accounts", async(req, res)=>{
+    try{
+        const fixed = await FixedAcc_Schema.create(req.body);
+
+        res.send(fixed);
+     }
+     catch(e){
+         res.send(e.message);
+     }
+})
+
+app.get("/fixed_accounts", async(req, res)=>{
+    try{
+        const fixed = await FixedAcc_Schema.find().lean().exec();
+
+        res.send(fixed);
+    }
+    catch(e){
+        res.send(e.message);
+    }
+})
 app.listen(3333, async(req, res)=>{
 
     try{

@@ -1,6 +1,6 @@
 const { application } = require("express");
 const {body, validationResult} = require("express-validator");
-const {upload} = require("../middlewares/fileuploads")
+const {upload,uploadSingle} = require("../middlewares/fileuploads")
 const express = require("express");
 const User = require("../models/user.model")
 const router = express.Router();
@@ -25,9 +25,19 @@ body("email")
     //     }
     //     return true;
     // }), 
-    upload.single("profileImages"),
+    uploadSingle("profileImages"),
     async(req, res) => {
         try{
+            // const errors = validationResult(req);
+            // if (!errors.isEmpty()) {
+            //     let newErrors;
+            //     newErrors = errors.array().map((err)=>{
+            //         return { key: err.param, message:err.msg};
+            //     });
+            //     return res.status(400).json({ errors: newErrors });
+
+            // };
+            
       const user = await User.create({
           firstName : req.body.firstName,
           lastName : req.body.lastName,

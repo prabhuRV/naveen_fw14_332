@@ -31,19 +31,20 @@ const storage = multer.diskStorage({
       }
   })
 
-//   const uploadSingle = (filekey) => {
-//       return function ( req, res, next) {
-//           const uploadItem = upload.any(filekey);
-//           uploadItem(req, res, function (err) {
-//               if(err instanceof multer.MulterError) {
-//                   return res.status(500)/send(err.message);
-//               }
-//               else if (err){
-//                   return res.status(500).send(err.message);
-//               }
-//           })
-//       }
-//   }
+  const uploadSingle = (filekey) => {
+      return function ( req, res, next) {
+          const uploadItem = upload.any(filekey);
+          uploadItem(req, res, function (err) {
+              if(err instanceof multer.MulterError) {
+                  return res.status(500).send(err.message);
+              }
+              else if (err){
+                  return res.status(500).send(err.message);
+              }
+              next()
+          })
+      }
+  }
 
-  module.exports = {upload};
+  module.exports = {upload, uploadSingle};
   

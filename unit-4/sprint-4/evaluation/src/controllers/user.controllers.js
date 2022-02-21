@@ -1,6 +1,6 @@
 const { application } = require("express");
-
 const {body, validationResult} = require("express-validator");
+const {upload, uploadSingle} = require("../middlewares/fileuploads")
 const express = require("express");
 const User = require("../models/user.model")
 const router = express.Router();
@@ -24,14 +24,20 @@ body("email")
             throw new Error("Email already exists");
         }
         return true;
-    }),
+    }), uploadSingle("profileImages"),
 async(req, res) => {
     try{
-      const user = await User.create(req.body);
+      const user = await User.create({
+          firstName : req.body.firstName,
+          lastName : req.body.lastName,
+          age : req.body.age,
+          email : req.body.email,
+          profileImages: req.body.profileImages
+      });
     }
     catch(err){
        return res.status(400).send(err.message)
     }
 })
 
-//module.exports = router
+module.exports = router

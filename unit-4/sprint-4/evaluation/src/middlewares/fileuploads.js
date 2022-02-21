@@ -14,8 +14,8 @@ const storage = multer.diskStorage({
   });
 
   function fileFilter (req, file, cb) {
-    if(file.mimetype === "image/png"){
-        cb(new Error("something went wrong"),true);
+    if(file.mimetype === "image/png" || file.mimetype === "image/jpeg"){
+        cb(null,true);
     }
     else {
         cb(null,false);
@@ -23,7 +23,7 @@ const storage = multer.diskStorage({
   
   };
 
-  const uplaod = multer({
+  const upload = multer({
       storage,
       fileFilter,
       limits: {
@@ -31,19 +31,19 @@ const storage = multer.diskStorage({
       }
   })
 
-  const uploadSingle = (filekey) => {
-      return function ( req, res, next) {
-          const uploadItem = upload.any(filekey);
-          uploadItem(req, res, function (err) {
-              if(err instanceof multer.MulterError) {
-                  return res.status(500)/send(err.message);
-              }
-              else if (err){
-                  return res.status(500).send(err.message);
-              }
-          })
-      }
-  }
+//   const uploadSingle = (filekey) => {
+//       return function ( req, res, next) {
+//           const uploadItem = upload.any(filekey);
+//           uploadItem(req, res, function (err) {
+//               if(err instanceof multer.MulterError) {
+//                   return res.status(500)/send(err.message);
+//               }
+//               else if (err){
+//                   return res.status(500).send(err.message);
+//               }
+//           })
+//       }
+//   }
 
-  module.exports = {upload, uploadSingle};
+  module.exports = {upload};
   

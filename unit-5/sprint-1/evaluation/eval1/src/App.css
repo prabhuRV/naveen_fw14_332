@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.items{
+  display: flex;
+  margin: 30px;
+}
+.items > button {
+  margin-left: 20px;
+}
+.items > span {
+  margin-left: 20px;
+}
+
+.total {
+  margin-left: 100px;
+  font-size: larger;
+}
+

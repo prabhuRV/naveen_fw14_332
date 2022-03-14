@@ -1,5 +1,26 @@
 {
-    "houses" : [
-
-    ]
+  "houses": [
+    {
+      "name": "htrdjk",
+      "ownername": "dasdf",
+      "address": "sdfasdfasdfas",
+      "areaCode": "323523",
+      "rent": "234234",
+      "bachelor": "on",
+      "married": "",
+      "image": "eafwa",
+      "id": 1
+    },
+    {
+      "name": "htrdjk",
+      "ownername": "dasdf",
+      "address": "sdfasdfasdfas",
+      "areaCode": "323523",
+      "rent": "234234",
+      "bachelor": "on",
+      "married": "",
+      "image": "eafwa",
+      "id": 2
+    }
+  ]
 }

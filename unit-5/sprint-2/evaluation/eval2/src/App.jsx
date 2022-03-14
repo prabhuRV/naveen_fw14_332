@@ -9,6 +9,7 @@ function App() {
         
         <AddHouse />
         {/* Show text Add House or Show Rentals based on state */}
+        <Rentals />
       </button>
       {/* Show component based on state */}
       <br />

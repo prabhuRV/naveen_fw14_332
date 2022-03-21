@@ -5,7 +5,7 @@ import { BookCard } from "../BookCard/BookCard";
 import { SortAndFilterButtons } from "../SortAndFilterButtons/SortAndFilterButtons";
 import styled from "styled-components";
 
-export const Section = () => {
+export const Section = ({sec}) => {
   // you will receive section name from URL here.
   // Get books for only this section and show
   //   Everything else is same as Home page

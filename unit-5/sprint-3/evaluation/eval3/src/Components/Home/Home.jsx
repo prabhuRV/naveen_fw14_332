@@ -1,6 +1,6 @@
 import { BookCard } from "../BookCard/BookCard";
 import { SortAndFilterButtons } from "../SortAndFilterButtons/SortAndFilterButtons";
-import { styled } from "styled-components";
+import styled from "styled-components";
 export const Home = () => {
   // get all books when user lands on the page
   // populate them as mentioned below

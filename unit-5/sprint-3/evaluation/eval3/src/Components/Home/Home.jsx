@@ -1,10 +1,20 @@
 import { BookCard } from "../BookCard/BookCard";
 import { SortAndFilterButtons } from "../SortAndFilterButtons/SortAndFilterButtons";
 import styled from "styled-components";
+import { useEffect, useState} from "react";
+import axios from "axios";
 export const Home = () => {
   // get all books when user lands on the page
   // populate them as mentioned below
-
+  const [books, setBooks] = useState([])
+  useEffect( ()=> {
+    getData()
+  },[])
+  const getData = ()=> {
+    axios.get("http://localhost:8080/Home", books).then( (res)=> {
+      setBooks(res.data)
+    })
+  }
   const Main = styled.div`
     /* Apply some responsive styling to children */
   `;

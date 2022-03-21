@@ -1,0 +1,16 @@
+{
+  "Home": [
+    {
+      "title":"Life's Amazing Secrets: ",
+   "imageUrl":"https://images-eu.ssl-images-amazon.com/images/I/51PJyvcfPGL._SY264_BO1,204,203,200_QL40_FMwebp_.jpg",
+   "description":"Gaur Gopal Das studied electrical engineering from the College of Engineering, Pune.",
+   "reviews":[
+       "multiple reviews here"
+   ],
+   "author":"Gaur Gopal Das",
+   "price": 123,
+   "section": "History",
+   "isbnNumber": 1234567
+    }
+  ]
+}

@@ -28,7 +28,7 @@ export const Home = () => {
         }
       />
 
-      <Main className="mainContainer">
+      <Main className="mainContainer" id="boxes">
         {/* 
             Iterate over books that you get from network
             populate a <BookCard /> component

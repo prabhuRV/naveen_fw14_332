@@ -39,3 +39,8 @@
 button {
   font-size: calc(10px + 2vmin);
 }
+
+#boxes {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}

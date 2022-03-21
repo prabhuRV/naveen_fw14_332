@@ -12,6 +12,150 @@
    "price": 123,
    "section": "History",
    "isbnNumber": 1234567
+    },
+    {
+      "id" : 2,
+      "title":"How to Win Friends and Influence People (Deluxe Hardbound Edition): ",
+   "imageUrl":"https://m.media-amazon.com/images/I/71rjriZD+qL._AC_UY436_FMwebp_QL65_.jpg",
+   "description":"Gaur Gopal Das studied electrical engineering from the College of Engineering, Pune.",
+   "reviews":[
+       "multiple reviews here"
+   ],
+   "author":"Gaur Gopal Das",
+   "price": 100,
+   "section": "History",
+   "isbnNumber": 1234567
+    },
+    {
+      "id" : 3,
+      "title":"Memory: How To Develop, Train, And Use It ",
+   "imageUrl":"https://m.media-amazon.com/images/I/71Kb2dJCxWL._AC_UY436_FMwebp_QL65_.jpg",
+   "description":"Gaur Gopal Das studied electrical engineering from the College of Engineering, Pune.",
+   "reviews":[
+       "multiple reviews here"
+   ],
+   "author":"Gaur Gopal Das",
+   "price": 200,
+   "section": "History",
+   "isbnNumber": 1234567
+    },
+    {
+      "id" : 4,
+      "title":"50 Greatest Short Stories ",
+   "imageUrl":"https://m.media-amazon.com/images/I/81HAu7GTkhL._AC_UL640_FMwebp_QL65_.jpg",
+   "description":"Gaur Gopal Das studied electrical engineering from the College of Engineering, Pune.",
+   "reviews":[
+       "multiple reviews here"
+   ],
+   "author":"Gaur Gopal Das",
+   "price": 50,
+   "section": "Mythology",
+   "isbnNumber": 1234567
+    },
+    {
+      "id" : 5,
+      "title":"The Art Of Saying NO: How To Stand Your Ground, Reclaim Your Time And Energy, And Refuse To Be Taken For Granted (Without Feeling Guilty!) (The Art Of Living Well Book 1) ",
+   "imageUrl":"https://m.media-amazon.com/images/I/81TeXefBnGL._AC_UL640_FMwebp_QL65_.jpg",
+   "description":"Gaur Gopal Das studied electrical engineering from the College of Engineering, Pune.",
+   "reviews":[
+       "multiple reviews here"
+   ],
+   "author":"Gaur Gopal Das",
+   "price": 500,
+   "section": "Mythology",
+   "isbnNumber": 1234567
+    },
+    {
+      "id" : 6,
+      "title":"The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life (Mark Manson Collection Book 1)",
+   "imageUrl":"https://m.media-amazon.com/images/I/71QKQ9mwV7L._AC_UY436_FMwebp_QL65_.jpg",
+   "description":"Gaur Gopal Das studied electrical engineering from the College of Engineering, Pune.",
+   "reviews":[
+       "multiple reviews here"
+   ],
+   "author":"Gaur Gopal Das",
+   "price": 1000,
+   "section": "Mythology",
+   "isbnNumber": 1234567
+    },
+
+    {
+      "id" : 7,
+      "title":"My First Library: Boxset of 10 Board Books for Kids",
+   "imageUrl":"https://m.media-amazon.com/images/I/711c-uf6AFL._AC_UY436_FMwebp_QL65_.jpg",
+   "description":"Gaur Gopal Das studied electrical engineering from the College of Engineering, Pune.",
+   "reviews":[
+       "multiple reviews here"
+   ],
+   "author":"Gaur Gopal Das",
+   "price": 700,
+   "section": "Technology",
+   "isbnNumber": 1234567
+    },
+    {
+      "id" : 8,
+      "title":"My First Library: Boxset of 10 Board Books for Kids",
+   "imageUrl":"https://m.media-amazon.com/images/I/711c-uf6AFL._AC_UY436_FMwebp_QL65_.jpg",
+   "description":"Gaur Gopal Das studied electrical engineering from the College of Engineering, Pune.",
+   "reviews":[
+       "multiple reviews here"
+   ],
+   "author":"Gaur Gopal Das",
+   "price": 800,
+   "section": "Technology",
+   "isbnNumber": 1234567
+    },
+    {
+      "id" : 9,
+      "title":"My First Library: Boxset of 10 Board Books for Kids",
+   "imageUrl":"https://m.media-amazon.com/images/I/711c-uf6AFL._AC_UY436_FMwebp_QL65_.jpg",
+   "description":"Gaur Gopal Das studied electrical engineering from the College of Engineering, Pune.",
+   "reviews":[
+       "multiple reviews here"
+   ],
+   "author":"Gaur Gopal Das",
+   "price": 900,
+   "section": "Technology",
+   "isbnNumber": 1234567
+    },
+    {
+      "id" : 10,
+      "title":"My First Library: Boxset of 10 Board Books for Kids",
+   "imageUrl":"https://m.media-amazon.com/images/I/711c-uf6AFL._AC_UY436_FMwebp_QL65_.jpg",
+   "description":"Gaur Gopal Das studied electrical engineering from the College of Engineering, Pune.",
+   "reviews":[
+       "multiple reviews here"
+   ],
+   "author":"Gaur Gopal Das",
+   "price": 1000,
+   "section": "Mystery",
+   "isbnNumber": 1234567
+    },
+    {
+      "id" : 11,
+      "title":"My First Library: Boxset of 10 Board Books for Kids",
+   "imageUrl":"https://m.media-amazon.com/images/I/711c-uf6AFL._AC_UY436_FMwebp_QL65_.jpg",
+   "description":"Gaur Gopal Das studied electrical engineering from the College of Engineering, Pune.",
+   "reviews":[
+       "multiple reviews here"
+   ],
+   "author":"Gaur Gopal Das",
+   "price": 1100,
+   "section": "Mystery",
+   "isbnNumber": 1234567
+    },
+    {
+      "id" : 12,
+      "title":"My First Library: Boxset of 10 Board Books for Kids",
+   "imageUrl":"https://m.media-amazon.com/images/I/711c-uf6AFL._AC_UY436_FMwebp_QL65_.jpg",
+   "description":"Gaur Gopal Das studied electrical engineering from the College of Engineering, Pune.",
+   "reviews":[
+       "multiple reviews here"
+   ],
+   "author":"Gaur Gopal Das",
+   "price": 1200,
+   "section": "Mystery",
+   "isbnNumber": 1234567
     }
   ]
 }

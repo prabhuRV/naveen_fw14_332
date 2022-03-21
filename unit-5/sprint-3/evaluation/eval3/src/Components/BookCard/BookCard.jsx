@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-
+import "../../App.css";
 export const BookCard = ({ id, imageUrl, title, price }) => {
   // Bookcard is a card looking component, that is also a 'Link' for react-router
   //  it's basically shows one books information.
@@ -20,13 +20,14 @@ export const BookCard = ({ id, imageUrl, title, price }) => {
   //    title, image price etc here
   // </YourStyledLink>
 
+
   return (
-    <>
+    <div>
       <div className="bookCard">
-        <img src={imageUrl} alt=""/>
+        <img src={imageUrl} alt="" width={"200px"} height={"200px"}/>
         <h2 className="title">{title}</h2>
         <h3 className="price"> {price} </h3>
       </div>
-    </>
+    </div>
   )
 };

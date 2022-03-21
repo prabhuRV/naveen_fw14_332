@@ -36,7 +36,11 @@ export const Home = () => {
             show in books Card.
         */}
         {books.map((item) => (
-          <BookCard 
+          <div key = {item.id}>
+            <BookCard id = {item.id} imageUrl={item.imageUrl} title={item.title} price={item.price} />
+          
+          </div>
+          
         ))}
       </Main>
     </div>

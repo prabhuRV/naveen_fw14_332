@@ -35,6 +35,9 @@ export const Home = () => {
             pass down books id, imageUrl, title, price and anything else that you want to 
             show in books Card.
         */}
+        {books.map((item) => (
+          <BookCard 
+        ))}
       </Main>
     </div>
   );

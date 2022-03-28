@@ -13,10 +13,10 @@ export const AllRoutes = () => {
         <Route exact path="/" element={<Home />} />
         {/* Create other routes here: Section, bookdetailspage and 404 */}
         {/*  */}
-        <Route exact path="/section/mystery" element={<Section sec={"mystery"}/>} />
-        <Route exact path="/section/history" element={<Section sec={"history"}/>} />
-        <Route exact path="/section/technology" element={<Section sec={"technology"}/>} />
-        <Route exact path="/section/mythology" element={<Section sec={"mythology"}/>} />
+        <Route exact path="/mystery" element={<Section sec={"mystery"}/>} />
+        <Route exact path="/history" element={<Section sec={"history"}/>} />
+        <Route exact path="/technology" element={<Section sec={"technology"}/>} />
+        <Route exact path="/mythology" element={<Section sec={"mythology"}/>} />
       </Routes>
     </>
   );

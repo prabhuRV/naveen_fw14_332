@@ -15,6 +15,8 @@ export const Routers = () => {
             {/* meetup route should be dynamic */}
             <Route path="/addmeetup" element={<AddMeetup />} />
             <Route path="/loginsignup" element={<LoginSignUp/>} />
+            <Route path="/meetup/${id}" element= {<Event />}/>
+
         </Routes>
     </>);
 }

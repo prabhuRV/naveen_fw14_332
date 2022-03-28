@@ -1,17 +1,30 @@
 import { Link } from "react-router-dom";
-
+import axios from "axios"
+import { useEffect, useState } from "react";
 export const Home = () => {
+  const [meetdata, setMeetdata] = useState([])
+  useEffect(()=>{
+    getData()
+  },[])
+  const getData = ()=> {
+    axios.get("http://localhost:8080/meetups").then((res)=> {
+      console.log(res.data)
+      setMeetdata(res.data)
+    })
+  }
   return (
     <div className="homeContainer">
-      {[]
-        .filter((el) => { }) // Filter on the basis of Users interests and location (both true)
+      {
+        meetdata.filter((el) => { }) // Filter on the basis of Users interests and location (both true)
         .map((el) => {
           return (
-            <Link to={`add route here`} className="events">
+            <Link to={`/meetup/el.id`} className="events">
               {/* add your children here (divs)
               ex : title, theme, description, date, time, location, image(optional)
               the classNames should be also : title, theme, description, date, time, location, image(optional)
              */}
+             <ol
+             <li></li>
             </Link>
           );
         })}

@@ -1,4 +1,5 @@
 // User should be able to add/create new meetups 
+import axios from "axios"
 import { useState } from "react";
 export const AddMeetup = () => {
   const [title,  setTitle] = useState("")
@@ -6,7 +7,7 @@ export const AddMeetup = () => {
   const [date, setDate] = useState("")
   const [time, setTime] = useState("")
   const [theme, setTheme] = useState("")
-  const [Description, setDescription] = useState("")
+  const [description, setDescription] = useState("")
   const [image, setImage]  = useState("")
   const dataobj = {
     title ,
@@ -14,12 +15,15 @@ export const AddMeetup = () => {
     date,
     time,
     theme,
-    Description,
+    description,
     image
   }
   const handleSubmit = (e)=> {
     e.preventDefault()
-    console.log(dataobj)
+    axios.post("http://localhost:8080/meetups", dataobj)
+    .then((res)=> {
+      console.log(res.data)
+    })
   }
   return (
     <div className="addMeetupContainer">
@@ -70,7 +74,7 @@ export const AddMeetup = () => {
         <input
           type="text"
           className="description"
-          value={Description}
+          value={description}
           onChange={(event) => {setDescription(event.target.value) }}
           placeholder="Description"
           required

@@ -1,5 +1,24 @@
 {
   "meetups": [
-    
+    {
+      "title": "sdfgasdg",
+      "location": "bangalore",
+      "date": "sdgasd",
+      "time": "gadsasdg",
+      "theme": "food",
+      "Description": "sdgasd",
+      "image": "asdgasd",
+      "id": 1
+    },
+    {
+      "title": "sdfgasdg",
+      "location": "bangalore",
+      "date": "sdgasd",
+      "time": "gadsasdg",
+      "theme": "food",
+      "Description": "sdgasd",
+      "image": "asdgasd",
+      "id": 2
+    }
   ]
 }

@@ -15,16 +15,22 @@ export const Home = () => {
   return (
     <div className="homeContainer">
       {
-        meetdata.filter((el) => { }) // Filter on the basis of Users interests and location (both true)
+        meetdata
+        // .filter((el) => { }) // Filter on the basis of Users interests and location (both true)
         .map((el) => {
           return (
-            <Link to={`/meetup/el.id`} className="events">
+            <Link to={`/meetup/el.id`} className="events" key={el.id}>
               {/* add your children here (divs)
               ex : title, theme, description, date, time, location, image(optional)
               the classNames should be also : title, theme, description, date, time, location, image(optional)
              */}
-             <ol
-             <li></li>
+             <h2>{el.title}</h2>
+             <h2>{el.location}</h2>
+             <h2>{el.data}</h2>
+             <h2>{el.time}</h2>
+             <h2>{el.theme}</h2>
+             <h2>{el.description}</h2>
+
             </Link>
           );
         })}

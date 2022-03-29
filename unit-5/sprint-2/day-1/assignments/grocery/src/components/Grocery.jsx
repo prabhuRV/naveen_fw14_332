@@ -1,6 +1,6 @@
 
 import { TodoInput } from "./GroceryInput";
-import { Todoitem } from './GroceryList'
+import { Todoitem } from "./GroceryList";
 import { useState } from "react";
 
 export const  Todo= ()=> {

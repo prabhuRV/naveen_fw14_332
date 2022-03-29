@@ -23,11 +23,13 @@ export const BookCard = ({ id, imageUrl, title, price }) => {
 
   return (
     <div>
+      <Link to="/books/id"> 
       <div className="bookCard">
         <img src={imageUrl} alt="" width={"200px"} height={"200px"}/>
         <h2 className="title">{title}</h2>
         <h3 className="price"> {price} </h3>
       </div>
+      </Link>
     </div>
   )
 };

@@ -10,14 +10,16 @@ export const Section = ({sec}) => {
   //   Everything else is same as Home page
   const [books, setBooks] = useState([])
   useEffect( ()=> {
-    getData()
-  },[])
+     getData()
+  }
+  ,[])
   const getData = ()=> {
     axios.get(`http://localhost:8080/${sec}`).then( (res)=> {
       setBooks(res.data)
+      console.log(res.data)
     })
   }
-
+  
   const Main = styled.div`
     /* Same as Homepage */
     display: grid;

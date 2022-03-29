@@ -8,10 +8,10 @@ export const Navbar = () => {
         {/* Example: 
             <button className="history"> Link to history here  </button>  */}
         {/* Home component will have `/` route and classname as `home`  */}
-        <button> <Link to="/section/History">History</Link></button>
-        <button> <Link to="/section/Mystery">Mystery</Link></button>
-        <button> <Link to="/section/Mythology">Mythology</Link></button>
-        <button> <Link to="/section/Technology">Technology</Link></button>
+        <button> <Link to="/history">History</Link></button>
+        <button> <Link to="/mystery">Mystery</Link></button>
+        <button> <Link to="/mythology">Mythology</Link></button>
+        <button> <Link to="/technology">Technology</Link></button>
       </div>
     </>
   );

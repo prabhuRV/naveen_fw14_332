@@ -9,6 +9,7 @@ export const AllRoutes = () => {
   return (
     <>
       <Navbar />
+      
       <Routes>
         <Route exact path="/" element={<Home />} />
         {/* Create other routes here: Section, bookdetailspage and 404 */}
@@ -17,6 +18,7 @@ export const AllRoutes = () => {
         <Route exact path="/history" element={<Section sec={"history"}/>} />
         <Route exact path="/technology" element={<Section sec={"technology"}/>} />
         <Route exact path="/mythology" element={<Section sec={"mythology"}/>} />
+        <Route exact path="/books/:id" element={<BookDetailsPage/>} />
       </Routes>
     </>
   );

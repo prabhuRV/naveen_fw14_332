@@ -12,13 +12,13 @@ const DataTable = ({formData})=> {
                 <th>Salary</th>
                 <th>Marital state</th>
             </tr>
-            {/* {formData.Object.keys.map((val,key) => {
+            {formData.Object.keys.map((val,key) => {
                 <tr key = {key}>
                     <td>{val.name}</td>
                     <td>{val.age}</td>
                     <td>{val.Address}</td>
                     </tr>
-            })} */}
+            })}
         </table>
     )
 }

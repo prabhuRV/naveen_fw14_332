@@ -32,12 +32,7 @@ export const RegContextProvider = ({children})=> {
        
         const [state, dispatch] = useReducer(reducer, initialstate)
         const {Name,Age,DOB,Residence,Address,Pincode} = state
-        const handleSubmit = ()=> {
-            axios.post("http://localhost:5004/Users")
-            .then()
-            .then({Name: "",Age:"", DOB:"",Residence: "", Address:"", Pincode: ""})
-            
-        }
+        
        
     return (
         <RegContext.Provider value={
@@ -50,7 +45,7 @@ export const RegContextProvider = ({children})=> {
                 Residence,
                 Address,
                 Pincode,
-                handleSubmit
+                
             }
             }>
             {children}
